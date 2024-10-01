@@ -4,7 +4,6 @@ from pyaction import PyAction
 
 from chart import Badge
 from pypi import Rate
-from vcs import git_config, git_add, git_commit
 
 workflow = PyAction()
 
@@ -27,10 +26,4 @@ def action(
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    badge.write_image(output_path + file_name)
-
-    input("c:")
-
-    git_config()
-    git_add(files=[output_path + file_name])
-    git_commit()
+    badge.write_image(output_path + file_name,)

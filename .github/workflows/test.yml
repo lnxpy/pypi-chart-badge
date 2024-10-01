@@ -1,19 +1,32 @@
-name: Testing
+name: Testing the action
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   Test:
+    strategy:
+      matrix:
+        package: [fastapi, requests, django, boto]
+
     runs-on: ubuntu-latest
+
     name: Testing the action
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Run action
         uses: ./
         with:
-          name: John
+          package_name: ${{ matrix.package }}
+          file_name: ${{ matrix.package }}_badge.svg
+          badge_color: '#03fc6f'
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: 'chart badge updated'
+          

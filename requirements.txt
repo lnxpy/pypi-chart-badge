@@ -1,1 +1,5 @@
 pyaction==0.7.0
+plotly==5.24.1
+requests==2.32.3
+pandas==2.2.1
+kaleido==0.2.1

@@ -20,3 +20,31 @@ inputs:
     description: The repository name in the form of "<owner>/<repo>"
     default: ${{ github.repository }}
     required: true
+
+  package_name:
+    description: The package name
+    required: true
+
+  badge_width:
+    description: Badge width size
+    default: 60
+  
+  badge_height:
+    description: Badge height size
+    default: 20
+
+  badge_color:
+    description: The plot line color (HEX or CSS-valid names)
+    default: '#4492F9'
+
+  days_limit:
+    description: The amount of selected days
+    default: 15
+
+  output_path:
+    description: The badge file path directory
+    default: .pypi_chart/
+
+  file_name:
+    description: The badge file name
+    default: badge.svg

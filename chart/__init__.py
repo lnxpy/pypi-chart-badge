@@ -1,6 +1,5 @@
-from pandas import DataFrame
 import plotly.express as px
-
+from pandas import DataFrame
 from plotly.graph_objs._figure import Figure
 
 
@@ -11,7 +10,9 @@ class Badge:
     def create_chart(
         self, badge_height: int, badge_width: int, badge_color: str
     ) -> Figure:
-        fig = px.line(self.df, height=badge_height, width=badge_width)
+        fig = px.line(
+            self.df, height=badge_height, width=badge_width, line_shape="spline"
+        )
 
         fig.update_traces(line_color=badge_color)
 
