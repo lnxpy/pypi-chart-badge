@@ -31,15 +31,10 @@ jobs:
           file_name: ${{ matrix.package }}_badge.svg
           badge_color: ${{ matrix.color }}
 
-      # - name: Upload badge as artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     path: .pypi_chart/${{ matrix.package }}_badge.svg
-
       - name: Upload badges as artifact
         uses: actions/upload-artifact@v3
         with:
-          path: .pypi_chart/*.svg
+          path: .pypi_chart/${{ matrix.package }}_badge.svg
 
   commit-badges:
     needs: updating-badge-files
