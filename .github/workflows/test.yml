@@ -31,23 +31,13 @@ jobs:
           file_name: ${{ matrix.package }}_badge.svg
           badge_color: ${{ matrix.color }}
 
-      - name: Upload badge as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: badge-${{ matrix.package }}
-          path: ${{ matrix.package }}_badge.svg
-
   commit-badges:
-    needs: updating-badge-files  # Ensure this job runs after all matrix jobs complete
+    if: ${{ always() }}
+    needs: updating-badge-files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Download all badge artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: '**'  # Download all artifacts uploaded by the matrix jobs
 
       - name: Commiting
         uses: EndBug/add-and-commit@v9
