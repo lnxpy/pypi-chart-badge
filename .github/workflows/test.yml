@@ -31,10 +31,16 @@ jobs:
           file_name: ${{ matrix.package }}_badge.svg
           badge_color: ${{ matrix.color }}
 
-      - name: Upload badge as artifact
+      # - name: Upload badge as artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     path: .pypi_chart/${{ matrix.package }}_badge.svg
+
+      - name: Upload badges as artifact
         uses: actions/upload-artifact@v3
         with:
-          path: .pypi_chart/${{ matrix.package }}_badge.svg
+          name: pypi-chart-badges
+          path: .pypi_chart/*.svg
 
   commit-badges:
     needs: updating-badge-files
@@ -43,12 +49,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download all badge artifacts
+      # - name: Download all badge artifacts
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     pattern: badge-*
+      #     path: .pypi_chart/
+      #     merge-multiple: true
+
+      - name: Download badges artifact
         uses: actions/download-artifact@v3
         with:
-          pattern: badge-*
+          name: pypi-chart-badges
           path: .pypi_chart/
-          merge-multiple: true
 
       - name: Commiting
         uses: EndBug/add-and-commit@v9
