@@ -39,7 +39,6 @@ jobs:
       - name: Upload badges as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: pypi-chart-badges
           path: .pypi_chart/*.svg
 
   commit-badges:
@@ -59,7 +58,6 @@ jobs:
       - name: Download badges artifact
         uses: actions/download-artifact@v3
         with:
-          name: pypi-chart-badges
           path: .pypi_chart/
 
       - name: Commiting
