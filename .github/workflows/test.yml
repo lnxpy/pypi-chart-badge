@@ -34,7 +34,7 @@ jobs:
       - name: Upload badge as artifact
         uses: actions/upload-artifact@v3
         with:
-          path: ${{ matrix.package }}_badge.svg
+          path: .pypi_chart/${{ matrix.package }}_badge.svg
 
   commit-badges:
     needs: updating-badge-files
