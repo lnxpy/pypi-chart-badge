@@ -34,8 +34,7 @@ jobs:
       - name: Upload badge as artifact
         uses: actions/upload-artifact@v3
         with:
-          name: badge-${{ matrix.package }}
-          path: .pypi_chart/${{ matrix.package }}_badge.svg
+          path: ${{ matrix.package }}_badge.svg
 
   commit-badges:
     needs: updating-badge-files
@@ -48,6 +47,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           pattern: badge-*
+          path: .pypi_chart/
+          merge-multiple: true
 
       - name: Commiting
         uses: EndBug/add-and-commit@v9
