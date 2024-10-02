@@ -1,8 +1,13 @@
-## PyPI Chart Badge <img alt="action-badge" src="https://img.shields.io/badge/pypi chart badge-white?logo=github-actions&label=GitHub%20Action&labelColor=white&color=0064D7"> <a href="https://github.com/lnxpy/pyaction"><img alt="pyaction" src="https://img.shields.io/badge/PyAction-white?label=Made%20with&labelColor=white&color=0064D7"></a>
+## PyPI Chart Badge
 
 This action allows you to create and put fancy-looking chart badges indicating the recent download rate of your Python packages in the README.
 
-Examples: ![chart_1](examples/chart_1.svg) ![chart_2](examples/chart_2.svg) ![chart_3](examples/chart_3.svg) ![chart_4](examples/chart_4.svg) ![chart_5](examples/chart_5.svg)
+### Examples
+This chart depicts the download rate of some popular Python packages over the last 15 days. (It dynamically updates every 24 hours)
+
+| fastapi | django | requests | boto |
+| ------- | ------ | -------- | ---- |
+| ![](.pypi_chart/artifact/fastapi_badge.svg) | ![](.pypi_chart/artifact/django_badge.svg) | ![](.pypi_chart/artifact/requests_badge.svg) | ![](.pypi_chart/artifact/boto_badge.svg) |
 
 
 ### Basic Usage
@@ -34,14 +39,16 @@ jobs:
 
 ```
 
-### More Options
+After each run, you'll have your badge stored in `.pypi_chart/badge.svg` of your repository.
+
+### Options
 
 | Option           | Default value     | Description                                                                                     | Required   |
 | :--------------: | :---------------: |-------------------------------------------------------------------------------------------------|:----------:|
-| `package_name`   | -                 | Package name                                                                                    | Yes        |
+| `package_name`   | -                 | The Package name                                                                                    | Yes        |
 | `badge_width`    | `60`              | Badge width size in pixels                                                                      | No         |
 | `badge_height`   | `20`              | Badge height size in pixels                                                                     | No         |
-| `badge_color`    | `'#4492F9'`       | Badge plot color (HEX or CSS-valid color names)                                                 | No         |
+| `badge_color`    | `'#4492F9'`       | Badge plot color (HEX or CSS color names)                                                 | No         |
 | `days_limit`     | `15`              | The amount of selected days                                                                     | No         |
 | `output_path`    | `.pypi_chart/`  | Badge file path directory                                                                       | No         |
 | `file_name`      | `badge.svg`       | Badge file name and extension (`.png`, `.jpg`, `.jpeg`, `.webp`, and `.pdf` are also supported) | No         |
