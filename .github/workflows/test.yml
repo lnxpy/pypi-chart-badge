@@ -12,13 +12,13 @@ jobs:
       matrix:
         include:
           - package: fastapi
-            color: blue
+            color: '#039284'
           - package: requests
             color: yellow
           - package: django
-            color: red
-          - package: boto
-            color: green
+            color: '#0A4A33'
+          - package: pydantic
+            color: '#E51EE8'
 
     steps:
       - name: Checkout
