@@ -3,8 +3,8 @@ description: PyPI package chart badge generator action
 author: Sadra Yahyapour
 
 branding:
-  icon: check
-  color: blue
+  icon: 'activity'
+  color: 'white'
 
 runs:
   using: docker
@@ -28,7 +28,7 @@ inputs:
   badge_width:
     description: Badge width size
     default: 60
-  
+
   badge_height:
     description: Badge height size
     default: 20
