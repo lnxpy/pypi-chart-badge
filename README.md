@@ -5,9 +5,9 @@ This action allows you to create and put fancy-looking chart badges indicating t
 ### Examples
 This chart depicts the download rate of some popular Python packages over the last 15 days. (It dynamically updates every 24 hours)
 
-| fastapi | django | requests | boto |
+| fastapi | django | requests | pydantic |
 | ------- | ------ | -------- | ---- |
-| ![](.pypi_chart/artifact/fastapi_badge.svg) | ![](.pypi_chart/artifact/django_badge.svg) | ![](.pypi_chart/artifact/requests_badge.svg) | ![](.pypi_chart/artifact/boto_badge.svg) |
+| ![](.pypi_chart/artifact/fastapi_badge.svg) | ![](.pypi_chart/artifact/django_badge.svg) | ![](.pypi_chart/artifact/requests_badge.svg) | ![](.pypi_chart/artifact/pydantic_badge.svg) |
 
 
 ### Basic Usage
