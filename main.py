@@ -1,9 +1,10 @@
 import os
 
 from pyaction import PyAction
+from pyaction.workflow import annotations
 
 from chart import Badge
-from pypi import Rate
+from pypi import API
 
 workflow = PyAction()
 
@@ -18,12 +19,17 @@ def action(
     output_path: str,
     file_name: str,
 ) -> None:
-    stats = Rate(package_name)
+    stats = API(package_name)
     rates_df = stats.get_rates(days_limit)
 
-    badge = Badge(rates_df).create_chart(badge_height, badge_width, badge_color)
+    badge = Badge(rates_df).create(badge_height, badge_width, badge_color)
 
     if not os.path.exists(output_path):
+        annotations.warning(
+            f"Couldn't find `{output_path}` path in the repo. So I'm making it!"
+        )
         os.makedirs(output_path)
 
-    badge.write_image(output_path + file_name,)
+    badge.write_image(
+        output_path + file_name,
+    )
