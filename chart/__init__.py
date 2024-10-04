@@ -5,23 +5,38 @@ from plotly.graph_objs._figure import Figure
 
 class Badge:
     def __init__(self, df: DataFrame) -> None:
+        """badge class for creating plotly badge-sized charts
+
+        Args:
+            df (DataFrame): a vector-like data
+        """
+
         self.df = df
 
-    def create_chart(
-        self, badge_height: int, badge_width: int, badge_color: str
-    ) -> Figure:
-        fig = px.line(
-            self.df, height=badge_height, width=badge_width, line_shape="spline"
+    def create(self, badge_height: int, badge_width: int, badge_color: str) -> Figure:
+        """creates the badge
+
+        Args:
+            badge_height (int): badge height size (in pixels)
+            badge_width (int): badge width size (in pixels)
+            badge_color (str): badge color
+
+        Returns:
+            Figure: badge figure
+        """
+
+        # creating the figure with the linear plot graphed
+        fig = (
+            px.line(
+                self.df,
+                height=badge_height,
+                width=badge_width,
+                line_shape="spline",
+            )
+            .update_traces(line_color=badge_color)  # coloring the plot
+            .update_xaxes(visible=False)  # hiding the x axes
+            .update_yaxes(visible=False)  # hiding the y axes
         )
-
-        fig.update_traces(line_color=badge_color)
-
-        # hide and lock down axes
-        fig.update_xaxes(visible=False, fixedrange=True)
-        fig.update_yaxes(visible=False, fixedrange=True)
-
-        # remove facet/subplot labels
-        fig.update_layout(annotations=[], overwrite=True)
 
         # strip down the rest of the plot
         fig.update_layout(
