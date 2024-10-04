@@ -41,6 +41,9 @@ jobs:
 
 After each run, you'll have your badge stored in `.pypi_chart/badge.svg` of your repository.
 
+> [!IMPORTANT]
+> You have to give the "Write Access" to your workflow so that changes can be committed back into the repo.
+
 ### Options
 
 | Option           | Default value     | Description                                                                                     | Required   |
@@ -53,5 +56,5 @@ After each run, you'll have your badge stored in `.pypi_chart/badge.svg` of your
 | `output_path`    | `.pypi_chart/`  | Badge file path directory                                                                       | No         |
 | `file_name`      | `badge.svg`       | Badge file name and extension (`.png`, `.jpg`, `.jpeg`, `.webp`, and `.pdf` are also supported) | No         |
 
-### Licesne
-MIT License terms.
+### License
+MIT license terms.
