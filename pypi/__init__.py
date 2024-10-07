@@ -29,7 +29,7 @@ class API:
 
         if r.status_code != 200:
             annotations.error(
-                f"There is an issue with the provided `package_name`: {r.reason}"
+                f"There was an issue with fetching the package data: {r.reason}"
             )
             raise SystemExit
 

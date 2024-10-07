@@ -27,7 +27,7 @@ def action(
 
     if not os.path.exists(output_path):
         annotations.warning(
-            f"Couldn't find `{output_path}` path in the repo. So I'm making it!"
+            f"Couldn't find `{output_path}` path in the repo. Creating it!"
         )
         os.makedirs(output_path)
 
