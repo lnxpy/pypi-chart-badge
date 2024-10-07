@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 
 from pyaction import PyAction
 from pyaction.workflow import annotations
@@ -30,6 +31,6 @@ def action(
         )
         os.makedirs(output_path)
 
-    badge.write_image(
-        output_path + file_name,
-    )
+    path = Path(output_path).joinpath(file_name)
+
+    badge.write_image(path)
