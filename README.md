@@ -2,6 +2,9 @@
 
 This action allows you to create and put fancy-looking chart badges indicating the recent download rate of your Python packages in the README.
 
+> [!NOTE]
+> Read [this article](https://blog.imsadra.me/display-your-package-download-rate-on-github) to learn how this action works and how to use it in your repositories.
+
 ### Examples
 This chart depicts the download rate of some popular Python packages over the last 15 days. (It dynamically updates every 24 hours)
 
