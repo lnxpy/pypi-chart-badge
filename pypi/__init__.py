@@ -3,7 +3,7 @@ from pandas import DataFrame
 from pyaction.workflow import annotations
 
 
-class API:
+class PyPI:
     def __init__(self, package_name: str) -> None:
         """pypi interface
 
