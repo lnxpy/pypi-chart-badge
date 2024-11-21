@@ -1,6 +1,6 @@
 [project]
 name = "pypi-chart-badge"
-version = "1.1.0"
+version = "1.2.0"
 description = "PyPI Chart Badge Generator"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -8,6 +8,9 @@ dependencies = [
     "kaleido==0.2.1",
     "pandas==2.2.1",
     "plotly==5.24.1",
-    "pyaction==0.7.2",
+    "pyaction==0.8.1",
     "requests==2.32.3",
 ]
+
+[project.optional-dependencies]
+cli = ["pyaction[cli]==0.8.1"]

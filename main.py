@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 from pyaction import PyAction
-from pyaction.workflow import annotations as AN
+from pyaction.workflow import annotations as A
 
 from chart import Badge
 from pypi import PyPI
@@ -21,13 +21,13 @@ def get_or_create_path(path: str) -> str:
     """
 
     if not os.path.exists(path):
-        AN.warning(f"Couldn't find `{path}` path in the repo. Creating it!")
+        A.warning(f"Couldn't find `{path}` path in the repo. Creating it!")
         os.makedirs(path)
 
     return path
 
 
-@workflow.action()
+@workflow.action
 def action(
     package_name: str,
     badge_width: int,
