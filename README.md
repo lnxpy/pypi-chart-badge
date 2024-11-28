@@ -1,4 +1,4 @@
-## PyPI Chart Badge
+## PyPI Chart Badge [![pyaction](https://img.shields.io/badge/PyAction-black?style=for-the-badge&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiIGRhdGEtbmFtZT0iU1ZHUmVwbyBpY29uQ2FycmllciI+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAuNywyMjAuNDNsMjMzLjUzLDI1Mi4zMkwzMzEuNTksMTguODksNS45Niw1ODEuM0gzNzUuMmwtMjI0LjMxLTY1LjUzYy0xMi42MS0zLjY5LTE3Ljc5LTE4Ljc0LTEwLjA3LTI5LjRMMzMxLjM5LDIyMi4xOGM2Ljk4LTkuNzIsMjEuMTgtMTAuNTcsMjkuMy0xLjc0WiIvPgogIDwvZz4KPC9zdmc+)](https://pyaction.imsadra.me/)
 
 This action allows you to create and put fancy-looking chart badges indicating the recent download rate of your Python packages in the README.
 
@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Updating the badge
-        uses: lnxpy/pypi-chart-badge@v1.3
+        uses: lnxpy/pypi-chart-badge@v1.4
         with:
           package_name: '<PACKAGE-NAME>'
 
@@ -49,15 +49,16 @@ After each run, you'll have your badge stored in `.pypi_chart/badge.svg` of your
 
 ### Options
 
-| Option         | Default value  | Description                                                                                     | Required |
-| :------------: | :------------: |-------------------------------------------------------------------------------------------------|:--------:|
-| `package_name` | -              | The Package name                                                                                | Yes      |
-| `badge_width`  | `60`           | Badge width size in pixels                                                                      | No       |
-| `badge_height` | `20`           | Badge height size in pixels                                                                     | No       |
-| `badge_color`  | `'#4492F9'`    | Badge plot color (HEX or CSS color names)                                                       | No       |
-| `days_limit`   | `15`           | The amount of selected days                                                                     | No       |
-| `output_path`  | `.pypi_chart/` | Badge file path directory                                                                       | No       |
-| `file_name`    | `badge.svg`    | Badge file name and extension (`.png`, `.jpg`, `.jpeg`, `.webp`, and `.pdf` are also supported) | No       |
+| Option              | Default value  | Description                                                                                     | Required |
+| :-----------------: | :------------: |-------------------------------------------------------------------------------------------------|:--------:|
+| `package_name`      | -              | The Package name                                                                                | Yes      |
+| `badge_width`       | `60`           | Badge width size in pixels                                                                      | No       |
+| `badge_height`      | `20`           | Badge height size in pixels                                                                     | No       |
+| `badge_color`       | `'#4492F9'`    | Badge plot color (HEX or CSS color names)                                                       | No       |
+| `badge_dark_color`  | `'#4492F9'`    | Badge plot dark color (HEX or CSS color names)                                                  | No       |
+| `days_limit`        | `15`           | The amount of selected days                                                                     | No       |
+| `output_path`       | `.pypi_chart/` | Badge file path directory                                                                       | No       |
+| `file_name`         | `badge.svg`    | Badge file name and extension (`.png`, `.jpg`, `.jpeg`, `.webp`, and `.pdf` are also supported) | No       |
 
 ### License
 MIT license terms.

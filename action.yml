@@ -3,8 +3,8 @@ description: PyPI package chart badge generator action
 author: Sadra Yahyapour
 
 branding:
-  icon: 'activity'
-  color: 'white'
+  icon: "activity"
+  color: "white"
 
 runs:
   using: docker
@@ -35,7 +35,11 @@ inputs:
 
   badge_color:
     description: The plot line color (HEX or CSS-valid names)
-    default: '#4492F9'
+    default: "#4492F9"
+
+  badge_dark_color:
+    description: The plot line dark color (HEX or CSS-valid names)
+    default: "#4492F9"
 
   days_limit:
     description: The amount of selected days

@@ -33,6 +33,7 @@ def action(
     badge_width: int,
     badge_height: int,
     badge_color: str,
+    badge_dark_color: str,
     days_limit: int,
     output_path: str,
     file_name: str,
@@ -41,6 +42,12 @@ def action(
     rates_df = package.get_rates(days_limit)
 
     badge = Badge(rates_df).create(badge_height, badge_width, badge_color)
-    path = Path(get_or_create_path(output_path)).joinpath(file_name)
+    dark_badge = Badge(rates_df).create(badge_height, badge_width, badge_dark_color)
 
-    badge.write_image(path)
+    badge_path = Path(get_or_create_path(output_path)).joinpath(file_name)
+    dark_badge_path = Path(get_or_create_path(output_path)).joinpath(
+        f"dark_{file_name}"
+    )
+
+    badge.write_image(badge_path)
+    dark_badge.write_image(dark_badge_path)
