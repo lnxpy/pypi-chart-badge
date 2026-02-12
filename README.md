@@ -1,9 +1,9 @@
-## PyPI Chart Badge [![pyaction](https://img.shields.io/badge/PyAction-black?style=flat&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiIGRhdGEtbmFtZT0iU1ZHUmVwbyBpY29uQ2FycmllciI+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAuNywyMjAuNDNsMjMzLjUzLDI1Mi4zMkwzMzEuNTksMTguODksNS45Niw1ODEuM0gzNzUuMmwtMjI0LjMxLTY1LjUzYy0xMi42MS0zLjY5LTE3Ljc5LTE4Ljc0LTEwLjA3LTI5LjRMMzMxLjM5LDIyMi4xOGM2Ljk4LTkuNzIsMjEuMTgtMTAuNTcsMjkuMy0xLjc0WiIvPgogIDwvZz4KPC9zdmc+)](https://pyaction.imsadra.me/)
+## PyPI Chart Badge [![pyaction](https://img.shields.io/badge/PyAction-black?style=flat&logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjAwIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiIGRhdGEtbmFtZT0iU1ZHUmVwbyBpY29uQ2FycmllciI+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNjAuNywyMjAuNDNsMjMzLjUzLDI1Mi4zMkwzMzEuNTksMTguODksNS45Niw1ODEuM0gzNzUuMmwtMjI0LjMxLTY1LjUzYy0xMi42MS0zLjY5LTE3Ljc5LTE4Ljc0LTEwLjA3LTI5LjRMMzMxLjM5LDIyMi4xOGM2Ljk4LTkuNzIsMjEuMTgtMTAuNTcsMjkuMy0xLjc0WiIvPgogIDwvZz4KPC9zdmc+)](https://pyaction.imsadra.dev/)
 
 This action allows you to create and put fancy-looking chart badges indicating the recent download rate of your Python packages in the README.
 
 > [!NOTE]
-> Read [this article](https://blog.imsadra.me/display-your-package-download-rate-on-github) to learn how this action works and how to use it in your repositories.
+> Read [this article](https://blog.imsadra.dev/display-your-package-download-rate-on-github) to learn how this action works and how to use it in your repositories.
 
 ### Examples
 This chart depicts the download rate of some popular Python packages over the last 15 days. (It dynamically updates every 24 hours)
